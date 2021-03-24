@@ -590,7 +590,7 @@
 			<button type="button" class="music" id="mute-sound">
 				<img border="0" alt="" src="./assets/soundgoldmusicwd.png" width="20" height="20">
 			</button>
-			<button type="button" class="music" id="unmute-sound">
+			<button type="button" class="music" id="unmute2-sound">
 				<img border="0" alt="" src="./assets/soundgoldmusicoffwd.png" width="20" height="20">
 			</button>
 		</button>
@@ -966,8 +966,8 @@
 					<br>kepada kedua mempelai.</p>
 				<br>
 				<br>
-				<div>
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d409.94458556140046!2d97.9426119566053!3d2.674607442196344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30300d3f64bf51a7%3A0x99708acbe7c3a8f3!2sVIDA%20PONSEL!5e0!3m2!1sen!2sid!4v1616459605190!5m2!1sen!2sid" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+				<div style="width:90%; margin-left: auto; margin-right: auto; border-radius: 6px;">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d409.94458556140046!2d97.9426119566053!3d2.674607442196344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30300d3f64bf51a7%3A0x99708acbe7c3a8f3!2sVIDA%20PONSEL!5e0!3m2!1sen!2sid!4v1616459605190!5m2!1sen!2sid" style="border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 				</div>
 				<br>
 				<div>	<a href="https://goo.gl/maps/Tbo3E1EmgBVEJM38A" target="_blank" style="background-color: #39473d; font-family: dosis; font-size: 18px; color: white; padding: 18px 30px; text-align: center; text-decoration: none; display: inline-block; border-radius: 8px"><strong>OpenMap</strong></a>
@@ -1071,10 +1071,10 @@
 						<div class="hormatkami">
 							<br>
 							<h4 style="color: #404040; font-size: 30px; font-family: Angelface;">Kami Yang Berbahagia</h4>
-							<p>Keluarga Bapak Slamet Musafi'i
+							<p style="font-family: dosis;">Keluarga Bapak Slamet Musafi'i
 								<br>& Ibu Siti Musarofah</p>
 							<p style="font-size:20px">- & -</p>
-							<p>Keluarga Bapak Sumardi
+							<p style="font-family: dosis;">Keluarga Bapak Sumardi
 								<br>& Ibu Poniyem</p>
 						</div>
 					</div>
@@ -1118,18 +1118,27 @@
 		            elmnt.style.backgroundColor = color;
 		        }
 		        // Get the element with id="defaultOpen" and click on it
-		        document.getElementById("defaultOpen").click();
-		            document.getElementById('mute-sound').style.display = 'none';
-		            document.getElementById('unmute-sound').addEventListener('click', function (event) {
-		                document.getElementById('unmute-sound').style.display = 'none';
-		                document.getElementById('mute-sound').style.display = 'inline-block';
-		                document.getElementById('song').play();
-		            });
-		            document.getElementById('mute-sound').addEventListener('click', function (event) {
-		                document.getElementById('mute-sound').style.display = 'none';
-		                document.getElementById('unmute-sound').style.display = 'inline-block';
-		                document.getElementById('song').pause();
-		            });
+				document.getElementById("defaultOpen").click();
+		
+				
+				document.getElementById('mute-sound').style.display = 'none';
+				document.getElementById('unmute-sound').addEventListener('click', function (event) {
+					document.getElementById('unmute2-sound').style.display = 'none';
+					document.getElementById('mute-sound').style.display = 'inline-block';
+					document.getElementById('song').play();
+				});
+				
+				document.getElementById('unmute2-sound').addEventListener('click', function (event) {
+					document.getElementById('unmute2-sound').style.display = 'none';
+					document.getElementById('mute-sound').style.display = 'inline-block';
+					document.getElementById('song').play();
+				});
+
+				document.getElementById('mute-sound').addEventListener('click', function (event) {
+					document.getElementById('mute-sound').style.display = 'none';
+					document.getElementById('unmute2-sound').style.display = 'inline-block';
+					document.getElementById('song').pause();
+				});
 		        // Script to open and close sidebar
 		            function w3_open() {
 		                document.getElementById("mySidebar").style.display = "block";
